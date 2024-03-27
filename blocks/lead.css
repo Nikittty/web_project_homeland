@@ -1,0 +1,15 @@
+.lead {
+  background-color: #2a2c2f;
+  color: #fff;
+  font-family: "Inter";
+  font-weight: 900;
+  padding: 90px 148px;
+}
+
+.lead__title {
+  font-size: 96px;
+  margin: 194px 243px;
+  max-width: 793px;
+  height: 200px;
+  text-align: center;
+}
