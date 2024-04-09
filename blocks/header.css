@@ -1,18 +1,23 @@
+.header {
+  background-color: #2a2c2f;
+}
+
 .header__logo {
-  width: 270px;
-  height: 70px;
   margin: 34px 505px;
   margin-bottom: 0;
 }
 
-@media (min-width: 544px) and (max-width: 1024px) {
+@media (min-width: 320px) and (max-width: 544px) {
   .header__logo {
-    margin: 34px 249px;
+    margin: 20px 60px;
+    margin-bottom: 0;
+    width: 200px;
   }
 }
 
 @media (min-width: 544px) and (max-width: 1024px) {
   .header__logo {
-    margin: 20px 60px;
+    margin: 34px 249px;
+    margin-bottom: 0;
   }
 }
