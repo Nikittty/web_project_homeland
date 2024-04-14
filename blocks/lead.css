@@ -32,7 +32,7 @@
   margin: 0 auto 91px;
 }
 
-@media (min-width: 767px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .lead__title {
     max-width: 720px;
   }
@@ -48,7 +48,7 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 768px) {
   .lead__title {
     font-size: 40px;
     max-width: 288px;
