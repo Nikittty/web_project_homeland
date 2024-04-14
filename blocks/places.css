@@ -1,46 +1,58 @@
 .places {
   background-color: #2a2c2f;
-  color: #ffffff;
+  color: white;
   font-family: "Inter";
-  font-weight: 900;
-  padding-bottom: 0;
-  margin: 0;
 }
 
 .place {
-  width: 984px;
-  height: 765px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 24px;
-  padding: 92px 148px;
-  padding-bottom: 0;
+  grid-template-columns: 460px 484px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "title artist"
+    "image text"
+    "button text"
+    ". text";
+  column-gap: 40px;
+  max-width: 984px;
+  justify-content: center;
+  margin: 0 auto 80px;
+}
+
+.place__bsas {
+  margin-bottom: 0;
 }
 
 .place__title {
-  margin: 0;
-  width: 460px;
-  height: 152px;
+  grid-area: title;
+  font-weight: 900;
   font-size: 72px;
+  line-height: 76px;
+  margin: 0;
+}
+
+.place__title-usa {
+  width: 584px;
 }
 
 .place__image {
-  height: 460px;
-  width: 460px;
-  padding-top: 48px;
+  max-width: 460px;
+  margin-top: 48px;
+  grid-area: image;
 }
 
 .place__button {
+  font-weight: 600;
+  font-size: 18px;
+  background-color: #0278fe;
+  color: white;
   width: 355px;
   height: 48px;
   border-radius: 4px;
-  background-color: #0278fe;
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 18px;
   border: none;
-  padding: 13px 20px;
+  margin-bottom: auto;
   margin-top: 48px;
+  grid-area: button;
 }
 
 .place__button:hover {
@@ -49,369 +61,194 @@
 }
 
 .place__artist {
-  width: 456px;
-  height: 45px;
-  padding-top: 107px;
+  grid-area: artist;
+  margin: auto auto 0 0;
 }
 
 .place__artist-title {
-  font-weight: 400;
   color: #aaaaaa;
+  font-weight: 400;
   font-size: 12px;
-  margin: 0;
-  letter-spacing: 1px;
+  margin: 0 auto 8px 0;
 }
 
 .place__artist-name {
-  margin: 0;
-  font-weight: 400;
-  font-size: 18px;
-  margin-top: 12px;
-}
-
-.place__artist-name:last-child {
-  margin-top: 0;
-}
-
-.place__artist-name-ukraine {
-  padding-top: 12px;
-}
-
-.place__paragraph {
   font-weight: 400;
   font-size: 18px;
   margin: 0;
-  width: 484px;
-  max-height: 203px;
-  line-height: 1.5;
-  grid-column: 2 / 3;
-  padding-top: 48px;
 }
 
-.place__paragraph:last-child {
-  padding-top: 25px;
-}
-
-.place__artists {
-  width: 456px;
-  height: 67px;
-  padding-top: 95px;
-}
-
-.place__paragraph__gales-first {
+.place__website {
+  grid-area: text;
   font-weight: 400;
-  font-size: 17.5px;
-  margin: 0;
-  max-width: 484px;
-  max-height: 174px;
-  line-height: 1.5;
-  padding-top: 48px;
-}
-
-.place__paragraph__gales-second {
-  font-weight: 400;
+  line-height: 163%;
   font-size: 18px;
-  margin: 0;
-  width: 484px;
-  max-height: 261px;
-  line-height: 1.5;
-  padding-top: 80px;
 }
 
-.place__title-usa {
-  width: 584px;
+.place__paragraph-one {
+  margin: 48px 0 0 0;
 }
 
-.place__image-usa {
-  padding-top: 17px;
-  padding-bottom: 45px;
-  width: 460px;
-  height: 460px;
+.place__paragraph-two {
+  margin: 25px 0 0 0;
 }
 
-.place__button-usa {
-  margin: 0;
+.place__paragraph-gales-two {
+  margin: 56px 0 0 0;
 }
 
-.place__website-usa {
-  position: relative;
-  right: 80px;
+.place__paragraph-usa-two {
+  margin: 17px 0 0 0;
 }
 
-.place__artist-usa {
-  padding-top: 80px;
+.place__paragraph-burundi-three {
+  margin: 25px 0 0 0;
 }
 
-.place__artist-name-usa {
-  padding-top: 12px;
-}
-
-.place__paragraph-usa-first {
-  max-height: 290px;
-  padding-top: 45px;
-}
-
-.place__paragraph-usa-second {
-  max-height: 203px;
-  padding-top: 0;
-  margin-top: 30px;
-}
-
-.place__artist-name-burundi {
-  padding-top: 12px;
-}
-
-.place__paragraph-burundi-second {
-  padding-top: 35px;
-}
-
-.place__paragraph-burundi-third {
-  height: 232px;
-  margin-top: 20px;
-}
-
-.place__artist-name-bsas {
-  padding-top: 12px;
-}
-
-@media (min-width: 320px) and (max-width: 544px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .place {
-    width: 320px;
-    height: 1169px;
-    padding: 0;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 340px 352px;
+    max-width: 720px;
+    column-gap: 28px;
+    margin: 0 auto 41px;
+  }
+
+  .place_bsas {
+    margin-bottom: 0;
   }
 
   .place__title {
-    width: 288px;
-    height: 35px;
-    font-size: 32px;
-    padding-left: 16px;
+    max-width: 340px;
+    font-size: 42px;
+    line-height: 46px;
   }
 
-  .place__artist {
-    width: 288px;
-    height: 67px;
-    padding-top: 10px;
-    padding-left: 16px;
+  .place__title-usa {
+    max-width: 340px;
   }
 
   .place__image {
-    width: 320px;
-    height: 320px;
-    padding-top: 25px;
+    max-width: 340px;
+    margin-top: 46px;
   }
 
-  .place__paragraph {
-    width: 288px;
-    height: 286px;
-    font-size: 16px;
-    padding-top: 10px;
-    padding-left: 16px;
-  }
-
-  .place__artist-name-ukraine {
-    height: 338px;
-    margin-top: 50px;
-    padding-bottom: 10px;
+  .place__artist {
+    margin: auto auto auto 0;
   }
 
   .place__website {
-    height: 730px;
-    grid-template-rows: repeat(3, 1fr);
-  }
-
-  .place__button {
-    width: 288px;
-    height: 48px;
-    margin-left: 16px;
-    font-size: 14px;
-    margin-top: 20px;
-  }
-
-  .place__title-gales {
-    padding-top: 30px;
-  }
-
-  .place__artists {
-    padding-top: 30px;
-    padding-left: 16px;
-    width: 288px;
-    height: 89px;
-  }
-
-  .place__paragraph-gales-first {
-    width: 288px;
-    height: 260px;
-    padding-left: 16px;
     font-size: 16px;
-    padding-top: 20px;
+    max-width: 352px;
   }
 
-  .place__paragraph-gales-second {
-    width: 288px;
-    height: 364px;
-    font-size: 16px;
-    padding-left: 16px;
+  .place__paragraph-one {
+    margin: 46px 0 0 0;
   }
 
-  .place__usa {
-    width: 320px;
-    height: 1186px;
+  .place__paragraph-two {
+    margin: 14px 0 0 0;
   }
 
-  .place__title-usa {
-    padding-top: 90px;
-    width: 288px;
-    height: 35px;
-    font-size: 32px;
+  .place__paragraph-gales-two {
+    margin: 25px 0 0 0;
   }
 
-  .place__image-usa {
-    width: 320px;
-    height: 320px;
-    padding: 0;
-    margin-top: 50px;
+  .place__paragraph-usa-two {
+    margin: 20px 0 0 0;
   }
 
-  .place__website-usa {
-    position: static;
-    height: 800px;
+  .place__paragraph-burundi-two {
+    margin: 11px 0 0 0;
   }
 
-  .place__artist-usa {
-    padding-top: 0;
-    margin-top: 25px;
-  }
-
-  .place__paragraph-usa-first {
-    width: 288px;
-    height: 390px;
-    font-size: 16px;
-  }
-
-  .place__paragraph-usa-second {
-    width: 288px;
-    height: 260px;
-    font-size: 16px;
-    margin-top: 60px;
-  }
-
-  .place__burundi {
-    height: 1433px;
-    padding-top: 120px;
-  }
-
-  .place__website-burundi {
-    height: 900px;
-  }
-
-  .place__title-burundi {
-    height: 70px;
-    width: 288px;
-  }
-
-  .place__paragraph-burundi-second {
-    padding-top: 20px;
-  }
-
-  .place__website-bsas {
-    height: 650px;
+  .place__paragraph-burundi-three {
+    margin: 11px 0 0 0;
   }
 }
 
-@media (min-width: 544px) and (max-width: 1024px) {
+@media (min-width: 320px) and (max-width: 768px) {
   .place {
-    width: 720px;
-    height: 600px;
-    padding: 92px 24px;
-    column-gap: 3px;
-    padding-bottom: 0;
+    grid-template-columns: 320px;
+    grid-template-areas:
+      "title"
+      "artist"
+      "image"
+      "text"
+      "button";
+    max-width: 320px;
+    grid-template-rows: auto;
+    margin: 0 auto 36px;
+    justify-content: center;
   }
 
-  .place:nth-child(n + 2) {
-    padding: 50px 24px;
-    padding-bottom: 0;
+  .place__bsas {
+    margin-bottom: 0;
   }
 
   .place__title {
-    width: 340px;
-    height: 46px;
-    font-size: 42px;
-  }
-
-  .place__image {
-    height: 340px;
-    width: 340px;
-  }
-
-  .place__artist {
-    width: 295px;
-    height: 67px;
-    padding-top: 0;
-  }
-
-  .place__artists {
-    padding-top: 0;
-  }
-
-  .place__paragraph {
-    font-size: 16px;
-    width: 352px;
-    max-height: 234px;
-  }
-
-  .place__paragraph-gales-first {
-    font-size: 16px;
-    max-width: 352px;
-    max-height: 208px;
-  }
-
-  .place__paragraph-gales-second {
-    font-size: 16px;
-    width: 352px;
-    max-height: 286px;
-    padding-top: 30px;
-  }
-
-  .place__website-usa {
-    position: static;
+    max-width: 320px;
+    font-size: 32px;
+    line-height: 35px;
+    grid-area: title;
+    margin: 0;
+    margin-bottom: 30px;
   }
 
   .place__title-usa {
-    width: 340px;
-    height: 92px;
+    max-width: 320px;
   }
 
-  .place__image-usa {
-    width: 340px;
-    height: 340px;
-  }
-
-  .place__usa {
-    height: 634px;
-  }
-
-  .place__paragraph-usa-second {
+  .place__image {
+    max-width: 320px;
     margin: 0;
-    margin-top: 75px;
+    margin-top: 30px;
+    grid-area: image;
   }
 
-  .place__burundi {
-    height: 845px;
+  .place__artist {
+    margin: 0;
+    grid-area: artist;
   }
 
-  .place__title-burundi {
-    width: 340px;
-    height: 92px;
+  .place__website {
+    font-size: 16px;
+    max-width: 320px;
+    grid-area: text;
   }
 
-  .place__paragraph-burundi-second {
-    margin-top: 0;
+  .place__paragraph-one {
+    margin: 0;
   }
 
-  .place__title-bsas {
-    width: 340px;
-    height: 92px;
+  .place__paragraph-two {
+    margin: 7px 0 0 0;
+  }
+
+  .place__paragraph-gales-two {
+    margin: 10px 0 0 0;
+  }
+
+  .place__paragraph-usa-two {
+    margin: 0;
+  }
+
+  .place__paragraph-burundi-two {
+    margin: 25px 0 0 0;
+  }
+
+  .place__paragraph-burundi-three {
+    margin: 25px 0 0 0;
+  }
+
+  .place__button {
+    grid-area: button;
+    width: 288px;
+    height: 48px;
+    font-size: 14px;
+    margin: 8px auto 0;
+  }
+
+  .place__link {
+    margin: 0 auto;
   }
 }
