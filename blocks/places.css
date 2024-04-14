@@ -19,10 +19,6 @@
   margin: 0 auto 80px;
 }
 
-.place__bsas {
-  margin-bottom: 0;
-}
-
 .place__title {
   grid-area: title;
   font-weight: 900;
@@ -113,10 +109,6 @@
     margin: 0 auto 41px;
   }
 
-  .place_bsas {
-    margin-bottom: 0;
-  }
-
   .place__title {
     max-width: 340px;
     font-size: 42px;
@@ -179,10 +171,6 @@
     grid-template-rows: auto;
     margin: 0 auto 36px;
     justify-content: center;
-  }
-
-  .place__bsas {
-    margin-bottom: 0;
   }
 
   .place__title {
