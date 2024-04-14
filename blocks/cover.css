@@ -95,6 +95,9 @@
 
   .cover__info {
     top: 338px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -116,8 +119,9 @@
   .cover__info {
     width: 268px;
     height: 163px;
-    top: 109.5px;
-    left: calc(50vw - 134px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .cover__title {
